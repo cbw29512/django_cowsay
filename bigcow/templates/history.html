@@ -1,0 +1,7 @@
+<h1>Whats did the cow say?</h1>
+
+{% for cow in cow_history %}
+<pre>{{ cow }}</pre>
+{% endfor %}
+
+<a href= "{% url 'homepage' %}"><button>Take me home!</button></a>
