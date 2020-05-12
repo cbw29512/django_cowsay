@@ -32,6 +32,7 @@ def history(request):
     cow_history = []
     for cow in cow_data:
         cow_history.append(cow)
+# Quackers - Matt helped with slicing
     cow_history = cow_history[-10:]
     cow_history.reverse()
     cow = cow_words('Our Last 10 Cows said:')
