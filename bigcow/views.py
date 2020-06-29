@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, HttpResponseRedirect
 from bigcow.forms import AddTextInput
 from bigcow.models import CowInput
 import subprocess
@@ -14,8 +14,8 @@ def index(request):
             form = AddTextInput()
             return render(
                 request, 'index.html',
-                {"form": form,  'cowput': cowput}
-                )
+                {"form": form, 'cowput': cowput}
+            )
         form = AddTextInput()
     return render(request, 'index.html', {'form': AddTextInput()})
 
@@ -38,4 +38,4 @@ def history(request):
     cow = cow_words('Our Last 10 Cows said:')
     return render(request, 'history.html', {
         "cow_history": cow_history, "cow": cow
-        })
+    })

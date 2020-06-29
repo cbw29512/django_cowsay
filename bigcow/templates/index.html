@@ -1,10 +1,15 @@
+<html>
+<body>
+<title>Cowsay</title>
+</head>
+<body>
 <h1>What does the Cowsay?</h1>
 <form action="" method="post"> 
 {% csrf_token %} 
 {{ form.as_p }} 
-<input type="submit" value="What does the cow say?" /> 
+<input type="submit" value="Make the cowsay here!"/> |
 </form> 
-{% for cow in cow_data%}
-{{cow}}
-{% endfor %}
+<pre>{{ cowput }}</pre>
 <a href= "{% url 'history' %}"><button>History</button></a>
+</body>
+</html>

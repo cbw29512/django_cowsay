@@ -1,7 +1,15 @@
-<h1>Whats did the cow say?</h1>
-
-{% for cow in cow_history %}
+<html>
+<head>
+<title>Cow Said</title>
+</head>
+<body>
+<h1>Whats did the Cowsay?</h1>
 <pre>{{ cow }}</pre>
-{% endfor %}
-
+<ul>
+    {% for cow in cow_history %}
+        <li><pre>{{cow}}</pre></li>
+    {% endfor %}
+</ul>
 <a href= "{% url 'homepage' %}"><button>Take me home!</button></a>
+</body>
+</html>
